@@ -1,0 +1,318 @@
+[
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "owner",
+				"type": "address"
+			}
+		],
+		"stateMutability": "payable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "_add",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "VNF_id",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "VNFD_id",
+				"type": "string"
+			}
+		],
+		"name": "CreateVNF",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "_add",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "VNF_id",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "VNFD_id",
+				"type": "string"
+			}
+		],
+		"name": "ScaleVNF",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "_add",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "VNF_id",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "VNFD_id",
+				"type": "string"
+			}
+		],
+		"name": "TerminateVNF",
+		"type": "event"
+	},
+	{
+		"inputs": [],
+		"name": "VNFowner",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"name": "VNFs",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "VNF_id",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "VNFD_id",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "CPU_nb",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "RAM",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "Storage",
+				"type": "uint256"
+			},
+			{
+				"internalType": "bool",
+				"name": "Isterminated",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "VNF_ID",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "VNFD_ID",
+				"type": "string"
+			},
+			{
+				"internalType": "address",
+				"name": "_u",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_cpu",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_storage",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_memory",
+				"type": "uint256"
+			}
+		],
+		"name": "createVNF",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_u",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "vnfID",
+				"type": "string"
+			}
+		],
+		"name": "getVNF",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "VNF_id",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "VNFD_id",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "CPU_nb",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "RAM",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "Storage",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "Isterminated",
+						"type": "bool"
+					}
+				],
+				"internalType": "struct VNF.vnf",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_u",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "vnfID",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_cpu",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_storage",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_memory",
+				"type": "uint256"
+			}
+		],
+		"name": "scaleVNF",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_u",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "vnf_id_old",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "vnf_id_new",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "vnfd_id_new",
+				"type": "string"
+			}
+		],
+		"name": "setVNFIDs",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_u",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "VNF_ID",
+				"type": "string"
+			}
+		],
+		"name": "terminateVNF",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+]

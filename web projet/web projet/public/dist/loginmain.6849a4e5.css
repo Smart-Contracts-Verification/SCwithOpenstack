@@ -1,0 +1,28 @@
+h1 {
+  justify-content: center;
+  display: flex;
+}
+
+.text-center {
+  text-align: center;
+  border-style: dotted;
+}
+
+.button {
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  background-color: #4caf50;
+  border: none;
+  margin: 4px 2px;
+  padding: 15px 32px;
+  font-size: 16px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.button1 {
+  background-color: #008cba;
+}
+
+/*# sourceMappingURL=loginmain.6849a4e5.css.map */
